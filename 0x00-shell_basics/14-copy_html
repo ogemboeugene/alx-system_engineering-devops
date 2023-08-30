@@ -1,13 +1,2 @@
 #!/bin/bash
-
-# Get the parent directory
-parent_dir=$(dirname $(pwd))
-
-# Loop through HTML files
-for html_file in *.html; do
-    # Check if the file doesn't exist in the parent directory or is newer
-    if [ ! -e "$parent_dir/$html_file" ] || [ "$html_file" -nt "$parent_dir/$html_file" ]; then
-        cp "$html_file" "$parent_dir"
-        echo "Copied $html_file to $parent_dir"
-    fi
-done
+parent_dir=$(dirname $(pwd)); for html_file in *.html; do [ ! -e "$parent_dir/$html_file" ] || [ "$html_file" -nt "$parent_dir/$html_file" ] && cp "$html_file" "$parent_dir"; done
