@@ -1,3 +1,2 @@
-0 string SCHOOL School data file
-!:mime School
-cp school.mgc /tmp/magic
+#!/bin/bash
+file -C -m school.mgc
