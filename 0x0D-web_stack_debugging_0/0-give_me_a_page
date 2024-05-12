@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#starts apache server and debugs
+
+sudo service apache2 start
+echo "Hello Holberton" | sudo tee /var/www/html/index.html
